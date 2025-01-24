@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="minimal.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJQXBNDX6M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BJQXBNDX6M');
+</script>
+
+	<title>Experimental Design and Programming</title>	
+  </head>
+  <body>
+      <div class="wrapper">
+	     <header>
+		  
+		      
+		<div class="dropdown">
+			<span>About...</span>
+				<div class="dropdown-content">
+					<p><a href="index.html">..the course</a></p>
+					<p><a href="team.html">..the team</a></p>
+				</div>
+		</div>
+		<div class="dropdown">
+			<span>Weekly Activities...</span>
+				<div class="dropdown-content">
+					<p><a href="schedule.html">..the schedule</a></p>
+				</div>
+		</div>
+		<div class="dropdown">
+			<span>Assessment...</span>
+				<div class="dropdown-content">
+					<p><a href="assess-bg.html">Understanding the Assessment</a></p>
+					<p><a href="ldt.html">Dual Lexical Decision Task</a></p>
+					<p><a href="requirements.html">Assessment Requirements</a></p>
+					<p><a href="guidance.html">Submission Guidance</a></p>
+					<p><a href="rubric.html">How you will be graded</a></p>
+				</div>
+		</div>
+		<div class="dropdown">
+			<span>Help...</span>
+				<div class="dropdown-content">
+					<p><a href="support.html">How to get help - Read me first</a></p>
+					<p><a href="videos.html">Video Resources - Work alongside</a></p>
+					<p><a href="howto.html">How to.. Resources </a></p>
+					<p><a href="FAQ.html">FAQ - Find help for known issues</a></p>
+					<p><a href="">https://live.moodle.hope.ac.uk/mod/forum/view.php?id=68691</a></p>
+				</div>
+		</div>
+		<p><img src="images/psychology.png" alt="Liverpool Hope University Psychology Logo"></p>
+		</header>
+		<section>
+			<img srcset="images/edp.png 480w, images/edp.png 800w" sizes="(max-width: 1600px) 1800px, 491px"
+             src="images/edp.png" alt="EDP Logo">
+
+
+<h3>Tutorials</h3>
+
+		<button type="button" class="collapsible">Installing PsychoPy
+		</button>
+		<div class="content">
+			<p>Throughout this site the examples have been developed in a Windows environment, but processes for Linux or Mac environments are comparable. The first step is to choose your installation. I recommend choosing the Standalone option, as this includes all the relevant dependencies and is the most hassle-free option.</p>
+				<p>Go to <a href="https://www.psychopy.org/download.html">PsychoPy Download Page</a> and select the tab that corresponds with your operating system. <img src="tutorials/install.jpg">
+					</p>
+					
+		</div>
+		
+		
+		<button type="button" class="collapsible">The PsychoPy Environment</button>
+		<div class="content">
+			<p>On the Windows menu, select PsychoPy Builder to open up the environment that you will be using to create experiments.</p>
+			<ol><li>The top bar is the menu, you will see a couple of familiar symbols like Save. There are new icons, such as Run, Settings (a cog icon) and Monitor Settings (a screen icon).</li>
+			<li>There are three panels. On the top left is the Routines panel, across the bottom is the Flow panel, and on the right hand side is the Components panel. This has several sections that can be expanded or collapsed.</li>
+			<li>The Flow is the foundation of your experiment. It runs from left to right in a linear fashion. So, you will typically see the things in order of appearance. You can place Routines and Loops on the flow using the buttons on the left side of the flow planel.</li>
+			<li> PsychoPy experiments are built together by adding a series of Routines along the flow. One way of thinking of these routines are as individual slides in a slideshow. In the example below there is a default routine named "trial".</li>
+			<li>The main window (Routines) shows the content of a single routine. Right now our routine “trial” is empty. If we had more than one routine, we could change which routine we were editing in the main window by clicking on it in the flow or clicking its tab in the upper left corner.</li>
+			<li>Depending upon the needs of your experiments, you will need to add images, text, audio, mouse or keyboard responses (and more) you use the components on the right panel.</li>
+			<li>The components you use most often will be shown at the top portion of the components menu while those used less often are shown in the menus below. You can control almost everything about components in Builder.</li>
+			<img src="tutorials/builderWindow.jpg">
+		</div>
+		
+		
+		<button type="button" class="collapsible">Adding Components to a Routine</button>
+		<div class="content">
+			<p>Check that you have the correct information in the stimulus component. For example if you are using text or image stimuli drawn from a conditions file you should reference your conditions file ensuring that you have
+			<ul>
+				<li>used the  $ sign to link the text or image component to the conds file</li>
+				<li>referenced the correct column heading name in the conds file following the $ as PsychoPy is case sensitive (importantce of good naming conventions)</li>
+				<li>set the stimulus to <strong>set every repeat</strong> option from the dropdown e.g. $targetWord --> set every repeat</li>
+			</ul> 
+		</div>
+		
+		
+		<button type="button" class="collapsible">KeyError: 'Participant'</button>
+		<div class="content">
+			<img srcset="images/keyerror.jpg 480w,
+                     images/keyerror.jpg 800w"
+             sizes="(max-width: 1600px) 1800px,
+                    491px"
+             src="images/keyerror.jpg" alt="image that shows the error message KeyError: 'participant'">
+			<p>The likelihood is that you have either renamed the participant field in the experiment info or deleted that field. It must exist AND be all lowercase because the data tab will look for that specific information to create the data file, therefore it can't find it and it crashes. See the How To for Experiment Settings</p>
+		</div>
+
+
+		<button type="button" class="collapsible">AttributeError: 'unicode object has no attribute'xxxx'</button>
+		<div class="content">
+			<p>This type of error is usually caused by a naming conflict. The most common source of naming conflicts in an external file which has been imported to be used in a loop i.e. .xlsx, .csv</p>
+			<p>Check to make sure that all of the variable names are unique. There can be no repeated variable names anywhere in your experiment, again highlighting the importance of good naing conventions!</p>
+		</div>
+		
+		
+		<button type="button" class="collapsible">The loop is not using my conditions file</button>
+		<div class="content">
+			<ul>
+				<li>Have you remembered to specify the file you want to use when setting up the loop?</li> 
+				<li>Have you remembered to add the variables preceeded by the $ symbol to your stimuli?</li> 
+				<li>Have you set your stimulus to every repeat?</li>
+			</ul>
+</div>
+
+
+		<button type="button" class="collapsible">The participant feedback is incorrect</button>
+		<div class="content">
+			<p>Ensure that the code components where you specify the feedack code is placed AFTER the stimuli on the routine.  Some code elements need to be at the beginning of a routine, and some after the stimuli.</p>
+		</div>
+		
+		
+		<button type="button" class="collapsible">NameError: xxxx is not defined</button>
+		<div class="content">
+			<p>If the error message says NameError: name 'xxxx is not defined' (with xxxx replaced by a variable name), this indicates to me that there is a problem with a variable specified in a stimulus component</p>
+			<ul>
+				<li>Check that you have used the $ sign to reference the stimulus correctly in the relevant component</li>
+				<li>Check that you have it set to every repeat  </li>
+				<li>Check the conditions file to ensure that the column names are spelled correctly there is no space at the end of the column name  </li>
+			</ul>
+		</div>
+		  
+		
+		<button type="button" class="collapsible">OS Error: Could not find image</button>
+		<div class="content">
+			<ul>
+				<li>Check that the file path to your image stimuli is correct in your conditions file. For example if your stimuli are in a stims folder the file path would be stims/imagename.jpg</li>
+				<li>Check that you have the correct file extension e.g. .jpg, .JPEG, .png and remember that PsychoPy uses case sensitivity</li>
+			</ul>  
+		</div>
+		  
+		  
+		<button type="button" class="collapsible">I need to resize my images</button>
+		<div class="content">
+			<p>Here's some useful links for image resizing tools
+				<ul>
+					<li><a href="https://www.howtogeek.com/354015/how-to-resize-images-and-photos-in-windows">https://www.howtogeek.com/354015/how-to-resize-images-and-photos-in-windows/</a></li>
+					<li><a href="https://www.alphr.com/how-to-resize-image/">https://www.alphr.com/how-to-resize-image/</a></li>
+					<li><a href="https://www.youtube.com/watch?v=lhmXoD15dKg">https://www.youtube.com/watch?v=lhmXoD15dKg </a></li>
+				</ul>
+			</div>
+			
+			
+		<button type="button" class="collapsible">The trials are repeating too many times</button>
+		<div class="content">
+			<p>Think about the number of stimuli you have in the conditions file, and the nReps you have set.
+				The nReps refers to how many times the conditions file will run. What does it say on the your trial loop on the flow? Your answer will be there!	
+			</p>
+		</div>
+
+		  
+	  
+		  
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<!--Begin Footer-->
+<hr>
+		<footer>
+			<div>
+				<h5>This project is maintained by <a href="https://github.com/GlenPennington">Dr Glen Pennington</a></h5>			
+					<p id="demo"></p>
+						<script>
+								let text = document.lastModified;
+								document.getElementById("demo").innerHTML = text;
+						</script>
+			</div>
+				<!--<script src="/assets/js/scale.fix.js"></script>-->
+		</footer>
+	</section>
+</div>
+</body>
+</html>
+
+

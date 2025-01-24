@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="minimal.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJQXBNDX6M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BJQXBNDX6M');
+</script>
+
+	<title>Experimental Design and Programming</title>	
+  </head>
+  <body>
+      <div class="wrapper">
+	     <header>
+		  
+		      
+		<div class="dropdown">
+			<span>About...</span>
+				<div class="dropdown-content">
+					<p><a href="index.html">..the course</a></p>
+					<p><a href="team.html">..the team</a></p>
+				</div>
+		</div>
+		<div class="dropdown">
+			<span>Weekly Activities...</span>
+				<div class="dropdown-content">
+					<p><a href="schedule.html">..the schedule</a></p>
+				</div>
+		</div>
+		<div class="dropdown">
+			<span>Assessment...</span>
+				<div class="dropdown-content">
+					<p><a href="assess-bg.html">Understanding the Assessment</a></p>
+					<p><a href="ldt.html">Dual Lexical Decision Task</a></p>
+					<p><a href="requirements.html">Assessment Requirements</a></p>
+					<p><a href="guidance.html">Submission Guidance</a></p>
+					<p><a href="rubric.html">How you will be graded</a></p>
+				</div>
+		</div>
+		<div class="dropdown">
+			<span>Help...</span>
+				<div class="dropdown-content">
+					<p><a href="support.html">How to get help - Read me first</a></p>
+					<p><a href="videos.html">Video Resources - Work alongside</a></p>
+					<p><a href="howto.html">How to.. Resources </a></p>
+					<p><a href="FAQ.html">FAQ - Find help for known issues</a></p>
+					<p><a href="">https://live.moodle.hope.ac.uk/mod/forum/view.php?id=68691</a></p>
+				</div>
+		</div>
+		<p><img src="images/psychology.png" alt="Liverpool Hope University Psychology Logo"></p>
+		</header>
+		<section>
+			<img srcset="images/edp.png 480w, images/edp.png 800w" sizes="(max-width: 1600px) 1800px, 491px"
+             src="images/edp.png" alt="EDP Logo">
+
+
+<h3>Frequently Asked Questions</h3>
+
+		<button type="button" class="collapsible">My stimulus or introduction text is not showing, it's just grey
+		</button>
+		<div class="content">
+			<p>Some suggestions to check in your component properties
+				<ul>
+					<li><strong>Check the spatial units used:</strong> If for example you are using pixels as the spatial units for text or image components, and your stimulus size  is still set to the default spatial unit of height (0.5, 0.5), then 0.5 in this instance this represents half a pixel, whereas in height units this is equivalent to 50% of the screen
+					</li>
+					<li><strong>Check the position of your stimulus:</strong> Is it positioned off the screen? In the Position property, does the x or y pos exceed the screen height or width
+					</li>
+					<li><strong>Check your font size:</strong>  For instructional text the font size is usually best somewhere between 18-24px and the Wrap width should be relative to the screen resolution (e.g, if your screen resoltuion is (1440, 900) your wrap width should not exceed 1440 pixels.)
+					</li>
+					<li><strong>Just tell me what size and spatial units to use!</strong> We can't tell you this as it will be different for every experiment and every monitor, although pixels is recommended for most applications of spatial units. For presenting text or image stimuli you should find support in previous literature to determine the presentation size on screen
+					</li>
+				</ul>
+		</div>
+		
+		
+		<button type="button" class="collapsible">I need to find out the size of my image in pixels</button>
+		<div class="content">
+			<ol>
+				<li>Right-click on the image (or, on a Mac, control-click)</li>
+				<li>Choose Properties or Get info</li>
+				<li>Click the General or More info tab</li>
+				<li>Use the Image section to see the image dimensions in pixels, or the File section to see the image file size</li>
+			</ol>
+		</div>
+		
+		
+		<button type="button" class="collapsible">My stimulus isn't changing as I progress through the loop</button>
+		<div class="content">
+			<p>Check that you have the correct information in the stimulus component. For example if you are using text or image stimuli drawn from a conditions file you should reference your conditions file ensuring that you have
+			<ul>
+				<li>used the  $ sign to link the text or image component to the conds file</li>
+				<li>referenced the correct column heading name in the conds file following the $ as PsychoPy is case sensitive (importantce of good naming conventions)</li>
+				<li>set the stimulus to <strong>set every repeat</strong> option from the dropdown e.g. $targetWord --> set every repeat</li>
+			</ul> 
+		</div>
+		
+		
+		<button type="button" class="collapsible">KeyError: 'Participant'</button>
+		<div class="content">
+			<img srcset="images/keyerror.jpg 480w,
+                     images/keyerror.jpg 800w"
+             sizes="(max-width: 1600px) 1800px,
+                    491px"
+             src="images/keyerror.jpg" alt="image that shows the error message KeyError: 'participant'">
+			<p>The likelihood is that you have either renamed the participant field in the experiment info or deleted that field. It must exist AND be all lowercase because the data tab will look for that specific information to create the data file, therefore it can't find it and it crashes. See the How To for Experiment Settings</p>
+		</div>
+
+
+		<button type="button" class="collapsible">AttributeError: 'unicode object has no attribute'xxxx'</button>
+		<div class="content">
+			<p>This type of error is usually caused by a naming conflict. The most common source of naming conflicts in an external file which has been imported to be used in a loop i.e. .xlsx, .csv</p>
+			<p>Check to make sure that all of the variable names are unique. There can be no repeated variable names anywhere in your experiment, again highlighting the importance of good naing conventions!</p>
+		</div>
+		
+		
+		<button type="button" class="collapsible">The loop is not using my conditions file</button>
+		<div class="content">
+			<ul>
+				<li>Have you remembered to specify the file you want to use when setting up the loop?</li> 
+				<li>Have you remembered to add the variables preceeded by the $ symbol to your stimuli?</li> 
+				<li>Have you set your stimulus to every repeat?</li>
+			</ul>
+</div>
+
+
+		<button type="button" class="collapsible">The participant feedback is incorrect</button>
+		<div class="content">
+			<p>Ensure that the code components where you specify the feedack code is placed AFTER the stimuli on the routine.  Some code elements need to be at the beginning of a routine, and some after the stimuli.</p>
+		</div>
+		
+		
+		<button type="button" class="collapsible">NameError: xxxx is not defined</button>
+		<div class="content">
+			<p>If the error message says NameError: name 'xxxx is not defined' (with xxxx replaced by a variable name), this indicates to me that there is a problem with a variable specified in a stimulus component</p>
+			<ul>
+				<li>Check that you have used the $ sign to reference the stimulus correctly in the relevant component</li>
+				<li>Check that you have it set to every repeat  </li>
+				<li>Check the conditions file to ensure that the column names are spelled correctly there is no space at the end of the column name  </li>
+			</ul>
+		</div>
+		  
+		
+		<button type="button" class="collapsible">OS Error: Could not find image</button>
+		<div class="content">
+			<ul>
+				<li>Check that the file path to your image stimuli is correct in your conditions file. For example if your stimuli are in a stims folder the file path would be stims/imagename.jpg</li>
+				<li>Check that you have the correct file extension e.g. .jpg, .JPEG, .png and remember that PsychoPy uses case sensitivity</li>
+			</ul>  
+		</div>
+		  
+		  
+		<button type="button" class="collapsible">I need to resize my images</button>
+		<div class="content">
+			<p>Here's some useful links for image resizing tools
+				<ul>
+					<li><a href="https://www.howtogeek.com/354015/how-to-resize-images-and-photos-in-windows">https://www.howtogeek.com/354015/how-to-resize-images-and-photos-in-windows/</a></li>
+					<li><a href="https://www.alphr.com/how-to-resize-image/">https://www.alphr.com/how-to-resize-image/</a></li>
+					<li><a href="https://www.youtube.com/watch?v=lhmXoD15dKg">https://www.youtube.com/watch?v=lhmXoD15dKg </a></li>
+				</ul>
+			</div>
+			
+			
+		<button type="button" class="collapsible">The trials are repeating too many times</button>
+		<div class="content">
+			<p>Think about the number of stimuli you have in the conditions file, and the nReps you have set.
+				The nReps refers to how many times the conditions file will run. What does it say on the your trial loop on the flow? Your answer will be there!	
+			</p>
+		</div>
+
+		  
+	  
+		  
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<!--Begin Footer-->
+<hr>
+		<footer>
+			<div>
+				<h5>This project is maintained by <a href="https://github.com/GlenPennington">Dr Glen Pennington</a></h5>			
+					<p id="demo"></p>
+						<script>
+								let text = document.lastModified;
+								document.getElementById("demo").innerHTML = text;
+						</script>
+			</div>
+				<!--<script src="/assets/js/scale.fix.js"></script>-->
+		</footer>
+	</section>
+</div>
+</body>
+</html>
